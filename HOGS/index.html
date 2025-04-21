@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome to HOGS</title>
-</head>
-<body style="background-color: black; color: white; text-align: center;">
-  <h1>Welcome to HOGS 👟</h1>
-  <h2>Laced With Confidence</h2>
-  <p>Professional shoe styles coming soon!</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>HOGS – Laced With Confidence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+
+    <!-- Navbar -->
+    <header class="absolute top-0 left-0 w-full flex items-center justify-between px-8 py-4 z-10">
+      <h1 class="text-2xl font-bold tracking-wider">HOGS</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#" class="hover:text-gray-300">Home</a>
+        <a href="#" class="hover:text-gray-300">Shop</a>
+        <a href="#" class="hover:text-gray-300">About</a>
+        <a href="#" class="hover:text-gray-300">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-screen bg-cover bg-center flex items-center justify-center text-center relative" style="background-image: url(shoe-bg.jpg);">
+      <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+        <h2 class="text-4xl md:text-6xl font-bold mb-4">Laced With Confidence</h2>
+        <p class="text-lg md:text-xl text-gray-300">Premium sneakers crafted for everyday elegance</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-black py-16 text-center">
+      <h3 class="text-2xl mb-4">Contact Us</h3>
+      <p class="text-gray-400">care.hogs@gmail.com | +91 7075656432</p>
+    </section>
+
+  </body>
 </html>
