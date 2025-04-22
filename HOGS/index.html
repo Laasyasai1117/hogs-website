@@ -10,9 +10,62 @@
       body {
         font-family: 'Montserrat', sans-serif;
       }
+
+      /* Coming Soon Popup */
+      .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 50;
+      }
+
+      .popup-content {
+        background: #111;
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 400px;
+        box-shadow: 0 0 15px rgba(255,255,255,0.2);
+      }
+
+      .popup-content h2 {
+        margin-bottom: 15px;
+      }
+
+      .popup-content a {
+        color: #ff4747;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .popup-content button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body class="bg-black text-white">
+
+    <!-- Coming Soon Popup -->
+    <div id="comingSoonPopup" class="popup">
+      <div class="popup-content">
+        <h2>🚀 HOGS is Coming Soon!</h2>
+        <p>Follow us on <a href="https://instagram.com/wearhogs" target="_blank">@wearhogs</a> for updates!</p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
 
     <!-- Navbar -->
     <header class="absolute top-0 left-0 w-full flex items-center justify-between px-8 py-4 z-10">
@@ -39,5 +92,24 @@
       <p class="text-gray-400">care.hogs@gmail.com</p>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-[#111] text-white py-6 text-center">
+      <p class="text-sm mb-2">© 2025 HOGS. All rights reserved.</p>
+      <div class="socials space-x-4">
+        <a href="https://instagram.com/wearhogs" target="_blank" class="hover:underline">Instagram</a>
+      </div>
+    </footer>
+
+    <!-- JS for Popup -->
+    <script>
+      window.onload = function () {
+        document.getElementById('comingSoonPopup').style.display = 'flex';
+      };
+
+      function closePopup() {
+        document.getElementById('comingSoonPopup').style.display = 'none';
+      }
+    </script>
+    
   </body>
 </html>
